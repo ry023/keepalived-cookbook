@@ -38,7 +38,7 @@ action :create do
         'interval' => new_resource.interval,
         'options' => options
       )
-      notifies :restart, 'service[keepalived]'
+      notifies :reload, 'service[keepalived]'
     end
   end
 end
